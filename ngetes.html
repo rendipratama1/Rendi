@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diren - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #222;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 20px 0;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 900;
+      font-size: 24px;
+      color: #222;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li {
+      font-weight: 500;
+      color: #333;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    nav ul li:hover,
+    nav ul li.active {
+      color: #b114dc;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 0;
+      background: linear-gradient(135deg, #df3131 55%, #eeedf1 45%);
+    }
+
+    .hero-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .text {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .text .intro {
+      font-size: 20px;
+      letter-spacing: 1px;
+      color: #888;
+    }
+
+    .text h1 {
+      font-size: 48px;
+      font-weight: 900;
+      color: #111;
+      margin: 10px 0;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: #444;
+      margin-bottom: 20px;
+    }
+
+    .social-icons i {
+      font-style: normal;
+      margin-right: 15px;
+      font-size: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 25px;
+      background: linear-gradient(to right, #a300d2, #df1be0);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background: linear-gradient(to right, #9100b5, #c215cc);
+    }
+
+    .image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; /* Penyesuaian alignment */
+      overflow: hidden;
+
+    }
+
+    .image img {
+      max-width: 400px;
+      height: auto;
+      display: block;
+      object-fit: cover; 
+      object-position: top; 
+      margin-bottom: -5px; 
+      
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      padding: 40px 0;
+      background: #f8f8f8;
+      text-align: center;
+    }
+
+    .stat h3 {
+      font-size: 28px;
+      color: #a300d2;
+    }
+
+    .stat p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    
+    .portfolio {
+      padding: 60px 0;
+      background: #fff;
+    }
+
+    .portfolio h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+      color: #111;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .portfolio-item {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease;
+      background: #fff;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .portfolio-item .info {
+      padding: 15px;
+    }
+
+    .portfolio-item .info h4 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .portfolio-item .info p {
+      font-size: 20px;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      .hero-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .stats {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+    .icon {
+      font-size: 25px;
+    }
+    .link{
+      font-size: 25px;
+    }
+    .dec{
+      font-size: 30px;
+    }
+    .re{
+      max-width: 150px;
+      max-height: 150px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">🔥🔥</div>
+      <nav>
+        <ul>
+          <li class="active">Home</li>
+          <li>About</li>
+          <li>Portfolio</li>
+          <li>Pages</li>
+          <li>Blog</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="text">
+        <p class="intro">Heloo</p>
+        <h1>Rendi Pratama</h1>
+        <p class="subtitle">Kelas A1 Pagi</p>
+        <div class="social-icons">
+          <strong><p class="dec">Saya mahasiswa UMSU Berusia 21 tahun yg berdomisili jalan peringgan karya II</p> </strong>
+         <div class="contact-section">
+            <h4>Kontak:</h4>
+            <p>📞 <span class="icon">Telepon:</span> <a class="link" href="tel:083893441466">083893441466</a></p>
+            <p>📱 <span class="icon">WhatsApp:</span> <a class="link" href="https://wa.me/083893441466">083893441466</a></p>
+            <p>📸 <span class="icon">Instagram:</span> <a class="link" href="#">@rndiprtma31_</a></p>
+        </div>
+        </div>
+        <a href="#" class="btn">SEE MY WORK</a>
+      </div>
+      <div class="image">
+        <img src="rendi.png" alt="Jo Breed">
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio">
+    <div class="container">
+      <h2>My Achievement</A></h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <div class="info">
+            <strong><p>Bermain bola</p></strong>
+            <img class="re" src="bermain bola.png" alt="">
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <div class="info">
+           <strong ><p>Membaca Novel</p></strong>
+           <img class="re" src="novel.png" alt="">
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <div class="info">
+            <p>Bermain Mobile Legend</p>
+            <img class="re" src="game.jpg" alt="">
+          </div>
+        </div>
+      </div>
+       <section class="portfolio">
+    <div class="container">
+      <h2>My Skill</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <div class="info">
+            <strong><p>Java Script</p></strong>
+            <img class="re" src="java.jpg.crdownload" alt="">
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <div class="info">
+           <strong ><p>Html</p></strong>
+           <img class="re" src="html.png" alt="">
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

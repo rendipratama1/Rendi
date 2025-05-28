@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rendi Pratama</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #222121;
+      color: #fff;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .sidebar {
+      width: 30%;
+      background-image: url('bacround.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .sidebar::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(18, 18, 18, 0.6);
+      z-index: 1;
+    }
+
+    .sidebar-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 15px;
+      border: 3px solid #a06aff;
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sidebar h1 {
+      font-size: 1.8em;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    .sidebar p.sub {
+      color: #a06aff;
+      margin-bottom: 20px;
+      font-size: 0.95em;
+      text-align: center;
+    }
+
+    .socials {
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .socials p {
+      margin: 8px 0;
+      font-size: 0.9em;
+      text-align: center;
+    }
+
+    .socials a {
+      color: #a06aff;
+      text-decoration: none;
+    }
+
+    .main {
+      flex: 1;
+      padding: 40px;
+      overflow-y: auto;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .about p {
+      line-height: 1.6;
+      margin-top: 10px;
+      color: #ccc;
+    }
+
+    .services {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .services h3 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .service-item {
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .service-item h4 {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .service-item p {
+      color: #aaa;
+      font-size: 0.95em;
+    }
+
+    .re {
+      max-width: 150px;
+      max-height: 150px;
+      margin-top: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+    <div class="sidebar-content">
+      <div class="profile-pic">
+        <img src="tenten.png" alt=>
+      </div>
+      <h1>Rendi Pratama</h1>
+      <p class="sub">Sistem Informasi</p>
+
+      <div class="socials">
+        <p><strong>Instagram:</strong> <a href="https://instagram.com/username" target="_blank">rndiprtma31_</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/6281234567890" target="_blank">083893441466</a></p>
+        <p><strong>Telepon:</strong> <a href="tel:+6281234567890">083893441466</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <section class="about">
+      <h2>About Me</h2>
+      <p><strong>21 years</strong> / Medan</p>
+      <p>Saya mahasiswa UMSU Berusia 21 tahun yg berdomisili jalan peringgan karya II</p>
+    </section>
+
+    <section class="services">
+      <h3>My Achievement</h3>
+      <div class="service-list">
+        <div class="service-item">
+          <h4>BOLA</h4>
+          <p>"Saya memiliki kesempatan untuk mencari nafkah dengan apa yang paling saya sukai dalam hidup, dan itu adalah bermain sepak bola. Saya bisa membuat orang bahagia dan menikmati diri saya sendiri pada saat yang sama."</p>
+          <img class="re" src="bermain bola.png" alt="Bermain Bola">
+        </div>
+        <div class="service-item">
+          <h4>Membaca Buku</h4>
+          <p>Siapa pun yang mengatakan bahwa mereka hanya memiliki satu kehidupan untuk dijalani pasti tidak tahu cara membaca buku.</p>
+          <img class="re" src="novel.png" alt="Membaca Buku">
+        </div>
+        <div class="service-item">
+          <h4>Database</h4>
+          <p>Setiap kesalahan bisa menjadi pelajaran</p>
+          <img class="re" src="3518004.jpg" alt="Database">
+        </div>
+      </div>
+
+      <h3>My Skill</h3>
+      <div class="service-list">
+        <div class="service-item">
+          <h4>HTML</h4>
+          <img class="re" src="html.png" alt="HTML">
+        </div>
+        <div class="service-item">
+          <h4>JAVA</h4>
+          <img class="re" src="java.PNG" alt="Java">
+        </div>
+        <div class="service-item">
+          <h4>Database</h4>
+          <img class="re" src="csss.jpg" alt="Database">
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
