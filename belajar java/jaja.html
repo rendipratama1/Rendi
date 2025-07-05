@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Latihan Console</title>
+</head>
+<body>
+  <h1>Buka Console untuk Lihat Output</h1>
+
+  <script>
+    const angka = [4, 7, 1, 9, 2, 5];
+    const buah = ["apel", "jeruk", "mangga", "apel", "pisang"];
+
+    buah.forEach((item, index) => {
+      console.log(`Buah ke-${index + 1} adalah ${item}`);
+    });
+
+    const kuadrat = angka.map(num => num ** 2);
+    console.log("Kuadrat:", kuadrat);
+
+    const ganjil = angka.filter(num => num % 2 !== 0);
+    console.log("Ganjil:", ganjil);
+
+    const lebihDari5 = angka.find(num => num > 5);
+    console.log("Angka pertama > 5:", lebihDari5);
+
+    const adaDurian = buah.includes("durian");
+    console.log("Ada durian?", adaDurian);
+
+    const angkaUrut = [...angka].sort((a, b) => a - b);
+    console.log("Urut angka:", angkaUrut);
+
+    const buahBalik = [...buah].reverse();
+    console.log("Balik buah:", buahBalik);
+
+    const dikali2 = angka.filter(num => num > 3).map(num => num * 2);
+    console.log("Angka > 3 dikali 2:", dikali2);
+
+    const buahUnik = [...new Set(buah)];
+    console.log("Buah unik:", buahUnik);
+
+    const buahString = buah.join(", ");
+    console.log("Gabung buah:", buahString);
+  </script>
+</body>
+</html>
